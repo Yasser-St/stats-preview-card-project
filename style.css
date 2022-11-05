@@ -1,0 +1,207 @@
+:root{
+    --Very-dark-blue: hsl(233, 47%, 7%);
+    --Dark-desaturated-blue : hsl(244, 38%, 16%);
+    --Soft-violet: hsl(277, 64%, 61%);
+    --White : hsl(0, 0%, 100%);
+    --Slightly-transparent-white : hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent-white : hsla(0, 0%, 100%, 0.6);
+}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+        /*  defaults  */
+*,
+::after,
+::before{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    border:1p solid chocolate;
+}
+
+body{
+    background-color:var(--Very-dark-blue);
+    display: grid;
+    place-content: center ;
+    min-height: 100vh;
+    font-weight: 400;
+    overflow: hidde;
+    
+}
+
+        /*  card start  */
+
+main{
+    min-width:600px ;
+    display: flex;
+    margin: 2rem ;
+}
+    
+article{
+    font-family: 'Inter',sans-serif;
+    background-color: var(--Dark-desaturated-blue);
+    width: 570px;
+    min-width: 300px;
+    padding: 5.85em 7em 5.85em 5.85em; 
+    border-radius: 10px 0px 0 10px;
+
+}
+
+article h1{  
+    color: var(--White);
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+article h1 span{
+    color: var(--Soft-violet);
+}
+
+article .content {
+    margin-right: 2em;
+  }
+
+article .scrept{
+    color: var(--Slightly-transparent-white);
+    font-size: 0.9em;
+    line-height: 1.5em;
+    margin-bottom: 5em;
+
+}
+
+article ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 1px;
+}
+
+article ul li:last-child{
+    margin-right: 20px;
+}
+
+article ul h2{
+    color: var(--White);
+    font-weight: 700;
+    margin-bottom: 0.3em;
+}
+article ul p{
+    color: var(--Slightly-transparent-white);
+    font-size: 0.75rem;
+    font-family: "Lexend Deca", sans-serif;
+    text-transform: uppercase;
+}
+
+        /*  card end  */
+        /*  picture  */
+.picture{
+    min-height: 10em;
+    width: 540px;
+    min-width: 200px;
+    background-image: url(./images/image-header-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0px 10px 10px 0px;
+    overflow: hidden;
+}
+.picture-bg{
+    background-color: var(--Soft-violet);
+    background-size: cover;
+    height: 100%;
+    opacity: 0.6;
+}
+
+
+
+
+
+
+        /*  footer  */
+.attribution {
+    margin-top: 10px;
+    font-size: 11px;
+    text-align: center;
+    color: var(--Slightly-transparent-white);
+    font-family: 'Lexend Deca',sans-serif ;
+}
+
+.attribution a {
+    color: var(--Soft-violet); 
+    text-decoration: none;
+} 
+
+.attribution a:hover{
+    cursor: pointer;
+    text-decoration:underline;
+}
+
+@media only screen and (max-width: 1024px) {
+    :root{
+        font-size: 12px;
+    }
+    article {
+      padding: 3em 4.5em 3em 3em;
+    }
+}
+  
+@media only screen and (max-width: 625px) {
+    body {
+      flex-direction: column;
+    }
+    main {
+      flex-direction: column-reverse;
+      margin: 10px;
+      min-width: 200px;
+      margin-top: 5em;
+    }
+    article{
+        padding: 0;
+        padding: 3em;
+        width: 300px;
+        border-radius: 0 0 10px 10px;
+    }
+    article h1{
+        text-align: center;
+    }
+ 
+    article .content{
+        margin-right: 0;
+    }
+  
+    article .scrept{
+        text-align: center;
+        font-size: 1.2em;
+        line-height: 1.75em;
+        margin-bottom: 3em;
+    }
+    
+    article ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    article ul li{
+        margin-bottom: 2em;
+    }
+    
+    article ul li:last-child{
+        margin-right: 0px;
+    }
+    
+    article ul h2{
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 0.25em;
+    }
+    article ul p{
+        font-size: 1rem;
+    }
+            /*  card end  */
+            /*  picture  */
+   .picture{
+        background-image: url(./images/image-header-mobile.jpg);
+        width: 100%;
+        height: 20em;
+        border-radius: 10px 10px 0px 0px;
+   }
+
+}
